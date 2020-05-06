@@ -74,7 +74,7 @@ podTemplate(label: label, containers: [
         }
       }
     }
-    if (BRANCH_NAME == "master") {
+    if (BRANCH_NAME == "jenkins") {
       stage("Build Image") {
         parallel(
           "Build Docker": {
