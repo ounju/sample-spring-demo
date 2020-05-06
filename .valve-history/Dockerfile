@@ -1,9 +1,8 @@
 # Dockerfile
 
-FROM openjdk:8-jre-alpine
+FROM tomcat:8-jre8-alpine
 ENV JAVA_OPTS="-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
+RUN rm -rf /usr/local/tomcat/webapps/*
 RUN apk add --no-cache bash curl
 EXPOSE 8080
-WORKDIR /data
-ENTRYPOINT exec java $JAVA_OPTS -jar ROOT.jar
-COPY ./target/*.jar /data/ROOT.jar
+COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
