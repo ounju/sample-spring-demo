@@ -1,5 +1,5 @@
 def SERVICE_GROUP = "sample"
-def SERVICE_NAME = "lemy-java-sample"
+def SERVICE_NAME = "lemy0715-sample"
 def IMAGE_NAME = "${SERVICE_GROUP}-${SERVICE_NAME}"
 def REPOSITORY_URL = "https://github.com/MuYoul/sample-spring-demo.git"
 def REPOSITORY_SECRET = ""
